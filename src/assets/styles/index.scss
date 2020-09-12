@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+.bg-image {
+  position: absolute;
+  left: 800px;
+  top: -20px;
+  width: 528px;
+  height: 688px;
+}
+
+//header
+.nav {
+  position: relative;
+  z-index: 10;
+  margin: 40px 30px 30px 30px;
+
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-item {
+    font-family: "Nunito Sans", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 27px;
+    margin-right: 60px;
+
+    &:first-of-type {
+      position: absolute;
+      left: 60px;
+    }
+
+    a {
+      padding: 30px 0 30px 0;
+      color: black;
+
+      &:hover {
+        color: #c08d5d;
+      }
+    }
+  }
+
+  img {
+    margin: 0 30px 0 30px;
+  }
+
+  .menu-button {
+    display: flex;
+    flex-wrap: wrap;
+    width: 26px;
+    height: 26px;
+
+    span {
+      display: inline-block;
+      font-size: 20px;
+      line-height: 13px;
+    }
+  }
+}
+//menu-button animation
+
+.menu-button:hover {
+  cursor: pointer;
+  span:first-of-type {
+    animation: menu-button 2s ease-in-out;
+  }
+  span:nth-of-type(2) {
+    animation: menu-button 2s ease-in-out 0.4s;
+  }
+  span:nth-of-type(3) {
+    animation: menu-button 2s ease-in-out 0.9s;
+  }
+  span:nth-of-type(4) {
+    animation: menu-button 2s ease-in-out 1.4s;
+  }
+}
+
+@keyframes menu-button {
+  50% {
+    color: #c08d5d;
+  }
+
+  100% {
+    color: #000;
+  }
+}
+
+//main-content
+
+h1 {
+  display: none;
+  font-family: "Playfair Display";
+  font-size: 70px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.container {
+  margin: 0px 70px 80px 70px;
+  background-color: #fffaf3;
+  box-shadow: 0 100px 50px -60px rgba(192, 141, 93, 0.2);
+  .main-content {
+    width: calc(100% / 2);
+    padding: 65px 0px 60px 135px;
+
+    .article {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+
+      .name {
+        display: block;
+        font-family: "Playfair Display";
+        font-weight: bold;
+        font-size: 50px;
+        letter-spacing: 0.06em;
+        color: #3f4042;
+
+        &:last-of-type {
+          font-family: "Playfair Display";
+          font-weight: bold;
+          font-size: 70px;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          width: 100%;
+          color: #3f4042;
+        }
+      }
+
+      img.logo {
+        width: 46px;
+        height: 70px;
+      }
+    }
+
+    img.divider {
+      margin: 15px 0 15px;
+    }
+
+    .about {
+      font-family: "Nunito Sans", sans-serif;
+      font-size: 18px;
+      line-height: 27px;
+      letter-spacing: 0.06em;
+      color: #3f4042;
+    }
+
+    button {
+      font-family: "Nunito Sans", sans-serif;
+      font-size: 20px;
+      color: #3f4042;
+      margin-top: 70px;
+      padding: 17px 16px;
+      background-color: transparent;
+      border: 2px solid #c08d5d;
+      border-right-width: 65px;
+    }
+  }
+}
